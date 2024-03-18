@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+        <h2> HospitalReg</h2>
+			<table border="2">
+			<tr>
+				<td>Hospital_id</td>
+				<td>Email</td>
+				<td>Location</td>
+				<td>Hospital name</td>
+				<td>Address</td>
+				<td>ContactNumber</td>
+
+
+				
+			</tr>
+                {% for i in s %}
+			<tr>
+				<td>{{ i.hospital_id }}</td>
+				<td>{{ i.email }}</td>
+                <td>{{ i.location }}</td>
+                <td>{{ i.hospital_name }}</td>
+                <td>{{ i.address }}</td>
+                <td>{{ i.contact_number }}</td>
+
+			</tr>
+                {% endfor %}
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

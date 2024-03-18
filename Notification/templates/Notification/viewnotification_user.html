@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+
+			<h2>Notification</h2>
+			<table border="2">
+			<tr>
+				
+				<td>police_id</td>
+				<td>Notification</td>
+				
+			</tr>
+                 {% for i in s %}
+			<tr>
+				<td>{{ i.police_id }}</td>
+				<td>{{ i.notification }}</td>
+				
+			</tr>
+                {% endfor %}
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

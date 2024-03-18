@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+            <form method="post">
+            {% csrf_token %}
+			<h2>Hospital reg</h2>
+                  <table>
+				<tr>
+					<td>Hospital_id</td>
+					<td><input type="int" name="username"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email"></td>
+				</tr>
+				<tr>
+					<td>ContactNumber</td>
+					<input type="int" name="ContactNumber">
+                     <td>
+					<td><input type="submit" value="submit" ></td>
+                    <td></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

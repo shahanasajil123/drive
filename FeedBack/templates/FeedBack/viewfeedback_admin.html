@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		<form method="post">
+			<h2>Feed Back</h2>
+			<table border="2">
+			<tr>
+				<td>Feedback</td>
+				<td>user_id</td>
+				<td>date</td>
+				<td>time</td>
+				
+			</tr>
+                {% for i in s %}
+			<tr>
+				<td>{{ i.feedback }}</td>
+				<td>{{ i.user_id }}</td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+
+				
+			</tr>
+                {% endfor %}
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

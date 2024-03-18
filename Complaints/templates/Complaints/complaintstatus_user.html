@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		<form method="post">
+			<h2>Complaints</h2>
+			<table border="2">
+			<tr>
+				<td>Complaint</td>
+				<td>date</td>
+				<td>time</td>
+                <td>reply</td>
+{#				<td>Action</td>#}
+			</tr>
+                {% for i in s %}
+			<tr>
+				<td>{{ i.complaint }}</td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+                <td>{{ i.reply }}</td>
+			</tr>
+                {% endfor %}
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

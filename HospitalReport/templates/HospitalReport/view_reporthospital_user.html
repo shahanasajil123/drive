@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+
+			<h2>Report Hospital</h2>
+			<table border="2">
+			<tr>
+				<td>Report</td>
+				<td>Status</td>
+
+			</tr>
+                {% for i in s %}
+			<tr>
+				<td>{{ i.report }}</td>
+				<td>{{ i.status }}</td>
+
+			</tr>
+                 {% endfor %}
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

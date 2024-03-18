@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		<form method="post">
+		{% csrf_token %}
+			<h2>Report Hospital</h2>
+			<table border="2">
+			<tr>
+				<td>Report</td>
+                <td><input type="text" name="Report"></td>
+            </tr>
+                <tr>
+				<td>status</td>
+                <td><input type="text" name="status"></td>
+                </tr>
+                <td>
+					<td><input type="submit" value="submit" ></td>
+                    <td></td>
+				
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				
+			</tr>
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

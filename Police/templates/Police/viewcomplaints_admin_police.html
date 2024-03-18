@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+
+			<h2>Complaints</h2>
+			<table border="2">
+			<tr>
+				<td>police_name</td>
+				<td>location</td>
+				<td>username</td>
+				<td>password</td>
+
+			</tr>
+                 {% for i in s %}
+			<tr>
+				<td>{{ i.police_name }}</td>
+				<td>{{ i.location }}</td>
+				<td>{{ i.username }}</td>
+				<td>{{ i.password }}</td>
+
+			</tr>
+                {% endfor %}
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

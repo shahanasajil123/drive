@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		    <form method="post">
+            {% csrf_token %}
+			<h2>Locational Alert</h2>
+			<table>
+				<tr>
+					<td>user_id</td>
+					<td><input type="int" name=" user"></td>
+				</tr>
+				<tr>
+					<td>Alert</td>
+					<td><input type="text" name="alert"></td>
+				</tr>
+				
+				
+				<tr>
+					<td></td>
+					<td><center><input type="submit" value="submit" ></center></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

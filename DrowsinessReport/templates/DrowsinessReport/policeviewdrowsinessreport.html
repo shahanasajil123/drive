@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+
+			<h2>Drowsiness Alert </h2>
+			<table border="2">
+			<tr>
+				<td>Alert</td>
+
+			</tr>
+                {% for i in s %}
+			<tr>
+				<td>{{ i.report }}</td>
+			</tr>
+                {% endfor %}
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

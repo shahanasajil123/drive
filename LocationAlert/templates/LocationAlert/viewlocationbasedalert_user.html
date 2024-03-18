@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+
+
+			<h2>Location based Alert</h2>
+			<table border="2">
+			<tr>
+				
+				<td>user_id</td>
+				<td>Alert</td>
+				
+			</tr>
+                {% for i in s %}
+			<tr>
+				<td>{{ i.user_id }}</td>
+				<td>{{ i.alert }}</td>
+				
+			</tr>
+                {% endfor %}
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

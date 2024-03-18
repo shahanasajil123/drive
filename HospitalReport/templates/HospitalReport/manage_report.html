@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+
+			<h2>add Report</h2>
+			<table>
+				<tr>
+					<td>Report</td>
+
+				</tr>
+                {% for i in s %}
+
+
+				<tr>
+					<td>{{ i.report }}</td>
+                <td><a href="/Hospital_report/edit/{{ i.hospital_report_id }}"> edit</a></td>
+
+				</tr>
+                 {% endfor %}
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>
