@@ -1,0 +1,38 @@
+
+{% extends 'temp/police_base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		<form method="post">
+            {% csrf_token %}
+
+
+			<h2>POLICE</h2>
+			<table class="table table-dark">
+				<tr>
+					<td>notification</td>
+					<td><input type="text" name="notification" required></td>
+				</tr>
+
+{#                <tr>#}
+{#					<td>police_id</td>#}
+{#					<td><input type="int" name="police_id" required></td>#}
+{#				</tr>#}
+
+
+				<tr>
+					<td></td>
+					<td><input type="submit" value="submit" ></center></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'temp/home_base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		<form method="post">
+            {% csrf_token %}
+			<h2>POLICE</h2>
+			<table class=" table table-dark ">
+				<tr>
+					<td>Username</td>
+					<td><input type="text" name="police" required></td>
+				</tr>
+{#				<tr>#}
+{#					<td>user_address</td>#}
+{#					<td><input type="text" name="address"></td>#}
+{#				</tr>#}
+                <tr>
+					<td>Password</td>
+					<td><input type="password" minlength="8" name="password" required></td>
+				</tr>
+                <tr>
+                    <td>Location</td>
+					<td><input type="text" name="location" required></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td><input type="submit" value="submit" ></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>
+{% endblock %}
