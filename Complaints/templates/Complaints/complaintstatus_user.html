@@ -1,3 +1,5 @@
+{% extends 'temp/police_base.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +9,9 @@
 	<center>
 		<form method="post">
 			<h2>Complaints</h2>
-			<table border="2">
+			<table border="2" class="table table-dark">
 			<tr>
-				<td>Complaint</td>
+				<td>C</td>
 				<td>date</td>
 				<td>time</td>
                 <td>reply</td>
@@ -29,3 +31,4 @@
 
 </body>
 </html>
+{% endblock %}

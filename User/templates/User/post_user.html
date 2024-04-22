@@ -1,3 +1,6 @@
+
+{% extends 'temp/home_base.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,28 +10,28 @@
 	<center>
 		<form method="post">
             {% csrf_token %}
-			<h2>USER</h2>
-			<table>
+			<h2>DRIVER</h2>
+			<table class="table table-dark">
 				<tr>
-					<td>user name</td>
-					<td><input type="text" name="user"></td>
+					<th>Username</th>
+					<td><input type="text" name="user" required></td>
 				</tr>
 				<tr>
-					<td>user_address</td>
-					<td><input type="text" name="address"></td>
+					<th>Address</th>
+					<td><input type="text" name="address" required></td>
 				</tr>
                 <tr>
-					<td>phonenumber</td>
-					<td><input type="int" name="Number"></td>
+					<th>Contact Number</th>
+					<td><input type="text" pattern="[0-9]{10}" name="Number" required></td>
 				</tr>
                 <tr>
-					<td>Email</td>
-					<td><input type="text" name="Email"></td>
+					<th>Email</th>
+					<td><input type="email" name="Email"required></td>
 				</tr>
 
 				<tr>
 					<td></td>
-					<td><center><input type="submit" value="submit" ></center></td>
+					<td><input type="submit" value="submit" ></td>
 				</tr>
 			</table>
 		</form>
@@ -36,3 +39,4 @@
 
 </body>
 </html>
+{% endblock %}

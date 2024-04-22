@@ -1,3 +1,5 @@
+{% extends 'temp/hospital base.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +8,8 @@
 <body>
 	<center>
 
-			<h2>add Report</h2>
+			<h2>view Report</h2>
+            <table border="2" class="table table-dark">
 			<table>
 				<tr>
 					<td>Report</td>
@@ -20,6 +23,7 @@
                 <td><a href="/Hospital_report/edit/{{ i.hospital_report_id }}"> edit</a></td>
 
 				</tr>
+                    </table>
                  {% endfor %}
 			</table>
 		</form>
@@ -27,3 +31,4 @@
 
 </body>
 </html>
+{% endblock %}

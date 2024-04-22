@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'Police.apps.PoliceConfig',
     'SecondaryNumber.apps.SecondarynumberConfig',
     'User.apps.UserConfig',
-
+    'temp.apps.TempConfig',
 ]
 
 MIDDLEWARE = [
@@ -91,11 +91,11 @@ WSGI_APPLICATION = 'Driver.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sample',
+        'NAME': 'project',
         'USER':'root',
         'PASSWORD':'root',
         'HOST':'localhost',
-        'PORT':''
+        'PORT':'3309'
     }
 }
 
@@ -136,7 +136,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+import os
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'static')
+STATIC_URL='/static/'
+STATICFILES_DIRS=[os.path.join(BASE_DIR,'static'),]
+import mimetypes
+mimetypes.add_type("text/css",".css",True)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

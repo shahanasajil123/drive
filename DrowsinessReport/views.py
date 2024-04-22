@@ -16,3 +16,15 @@ def policeviewdrowsinessreport(request):
         's': obj
     }
     return render(request, 'DrowsinessReport/policeviewdrowsinessreport.html',context)
+def adminviewdrowsiness(request):
+    obj = Drowsinessreport.objects.all()
+    context = {
+        's': obj
+    }
+    return render(request, 'DrowsinessReport/adminviewdrowsiness.html',context)
+def hospitalviewdrowsiness(request):
+    obj = Drowsinessreport.objects.all()
+    context = {
+        's': obj
+    }
+    return render(request, 'DrowsinessReport/hospitalviewdrowsinessreport.html',context)

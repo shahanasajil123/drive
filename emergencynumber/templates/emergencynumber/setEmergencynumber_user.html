@@ -1,3 +1,5 @@
+{% extends 'temp/admin_base.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +10,10 @@
 		<form method="post">
              {% csrf_token %}
 			<h2>Emergency Number </h2>
-
+<table border="1" class="table table-dark">
 			<tr>
 				<td>Emergency Number</td>
-                <td><input type="int" name="number"></td>
+                <td><input type="number" name="emergency_no" required></td>
 				
 			</tr>
 			<tr>
@@ -19,8 +21,10 @@
 				<td><input type="submit" value="submit" ></td>
 				
 			</tr>
+</table>
 		</form>
 	</center>
 
 </body>
 </html>
+{% endblock %}

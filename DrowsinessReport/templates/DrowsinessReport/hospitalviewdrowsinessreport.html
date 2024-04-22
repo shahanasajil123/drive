@@ -1,0 +1,28 @@
+{% extends 'temp/hospital base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+
+			<h2> Hospital Drowsiness </h2>
+			<table border="2" class="table table-dark">
+			<tr>
+				<td>Alert</td>
+
+			</tr>
+                {% for i in s %}
+			<tr>
+				<td>{{ i.report }}</td>
+			</tr>
+                {% endfor %}
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>
+{% endblock %}

@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 
+from temp import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('complaint/', include('Complaints.url')),
@@ -33,4 +35,6 @@ urlpatterns = [
     url('Police/', include('Police.url')),
     url('SecondaryNumber/', include('SecondaryNumber.url')),
     url('User/', include('User.url')),
+    url('temp/',include('temp.url')),
+    url('$',views.home),
 ]

@@ -1,3 +1,5 @@
+{% extends 'temp/adminhome.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,24 +7,24 @@
 </head>
 <body>
 	<center>
-		<form method="post">
-            {% csrf_token %}
 			<h2>Drowsiness Alert </h2>
-			<table>
+			<table class="table table-dark">
 
 			<tr>
-				<td>Alert</td>
-                <td><input type="text" name="alert"></td>
+				<th>Alert</th>
+                <th>User Id</th>
 				
 			</tr>
+                {% for i in x %}
 			<tr>
-                <td></td>
-				<td><input type="submit" value="submit" ></td>
+                <td>{{ i.alert }}</td>
+				<td>{{ i.user_id }}</td>
 				
 			</tr>
+                {% endfor %}
 			</table>
-		</form>
 	</center>
 
 </body>
 </html>
+{% endblock %}

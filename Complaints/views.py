@@ -3,18 +3,20 @@ from Complaints.models import Complaints
 import datetime
 # Create your views here.
 def postcomplaints_user(request):
+    uid=request.session["u_id"]
     if request.method=='POST':
         obj=Complaints()
         obj.complaint=request.POST.get('complaints')
         obj.date=datetime.datetime.today()
         obj.time=datetime.datetime.now()
-        obj.user_id=1
+        obj.user_id=uid
         obj.police_id=1
         obj.reply='pending'
         obj.save()
     return render(request, 'Complaints/postcomplaints_user.html')
 def Complaintstatus_user(request):
-    obj = Complaints.objects.filter(user_id=1)
+    uid=request.session["u_id"]
+    obj = Complaints.objects.filter(user_id=uid)
     context = {
         's': obj
     }

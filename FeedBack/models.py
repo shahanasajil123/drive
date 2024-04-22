@@ -5,7 +5,7 @@ class Feedback(models.Model):
     feedback_id = models.AutoField(primary_key=True)
     feedback = models.CharField(max_length=45)
     #user_id = models.IntegerField()
-    User=models.ForeignKey(User,on_delete=models.CASCADE)
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
     date = models.DateField()
     time = models.DateTimeField()
 

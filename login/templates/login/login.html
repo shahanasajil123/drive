@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+{% extends 'temp/home_base.html' %}
+{% block content %}
 <html>
 <head>
 	<title></title>
@@ -6,15 +8,16 @@
 <body>
 	<center>
 		<form method="post">
+            {% csrf_token %}
 			<h2>Login</h2>
-			<table>
+			<table class="table table-dark">
 				<tr>
 					<td>Username</td>
-					<td><input type="text" name="username"></td>
+					<td><input type="text" name="uname"></td>
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="password" name="password"></td>
+					<td><input type="password" name="pwd"></td>
 				</tr>
 				<tr>
 					<td></td>
@@ -26,3 +29,4 @@
 
 </body>
 </html>
+{% endblock %}
